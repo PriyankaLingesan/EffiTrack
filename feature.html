@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EffiTrack - Features</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+  
+    :root {
+      --background-gradient: radial-gradient(circle at top left, #b3d5f2, #e1f0ff);
+      --nav-bg: #d0e9ff;
+      --nav-text: #2c3e50;
+      --hero-bg: #f0f8ff;
+      --button: #5ca9f7;
+      --button-hover: #3f8de0;
+      --footer-bg: #d0e9ff;
+      --text-main: #2e4053;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+  
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--background-gradient);
+      margin: 0;
+      padding: 40px 20px;
+      color: var(--text-main);
+    }
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: var(--text-main);
+    }
+  
+    .features-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+  
+    .container {
+      position: relative;
+      height: 260px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px var(--shadow);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.35s ease, box-shadow 0.3s ease;
+    }
+  
+    .container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px var(--shadow);
+      background: var(--hero-bg);
+      z-index: 5;
+    }
+  
+    .container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+  
+    .container:hover img {
+      opacity: 0.1;
+    }
+  
+    .container h2 {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700; /* Bold for better visibility */
+  color: var(--text-main);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.container .info {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500; /* Medium weight for better readability */
+  padding: 0 10px;
+  color: var(--text-main);
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.container:hover h2,
+.container:hover .info {
+  opacity: 1;
+  color: #1c2d40; /* slightly deeper blue for visibility */
+}
+
+  </style>
+  
+</head>
+<body>
+  <h1>🚀 EffiTrack - Features</h1>
+
+  <div class="features-container">
+    <div class="container" onclick="window.open('kanban-board.html', '_blank')">
+      <img src="taskManager.jpg" alt="Task Manager" />
+      <h2>Task Manager</h2>
+      <div class="info">Organize and manage your tasks with Kanban view.</div>
+    </div>
+
+    <div class="container" onclick="window.open('timer.html', '_blank')">
+      <img src="clock.jpg" alt="Time Tracking" />
+      <h2>⏳ Time Tracker</h2>
+      <div class="info">Track work sessions using Pomodoro or custom timers.</div>
+    </div>
+
+    <div class="container" onclick="window.open('calendar.html', '_blank')">
+      <img src="calendar.jpg" alt="Calendar" />
+      <h2>📅 Calendar</h2>
+      <div class="info">Plan your weeks and sync events efficiently.</div>
+    </div>
+
+    <div class="container" onclick="window.open('study-video.html', '_blank')">
+      <img src="study.jpg" alt="Study With Me" />
+      <h2>📺 Study With Me</h2>
+      <div class="info">Focus in real time with curated study sessions.</div>
+    </div>
+
+    <div class="container" onclick="window.open('spotify.html', '_blank')">
+      <img src="spotify.jpg" alt="Spotify Music" />
+      <h2>🎵 Spotify Music</h2>
+      <div class="info">Stream curated productivity playlists directly.</div>
+    </div>
+
+    <div class="container" onclick="window.open('music.html', '_blank')">
+      <img src="music.jpg" alt="Custom Music" />
+      <h2>🎼 Custom Music</h2>
+      <div class="info">Build your own productivity music sets.</div>
+    </div>
+  </div>
+</body>
+</html>
